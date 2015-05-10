@@ -68,6 +68,7 @@ html{
 .social-bar{
 	height: 100%;
 	float: right;
+	border:5px solid;
 }
 .icon{
 	padding-right :5px;
