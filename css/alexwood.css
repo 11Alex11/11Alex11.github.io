@@ -65,19 +65,20 @@ html{
 	top:1px;
 }
 
-.social-div{
+.network-bar{
 	height: 100%;
 	float: right;
-	border:5px solid;
 }
 .icon{
 	padding-right :5px;
 	width: 40px;
 
 }
-.social-icon{
+.network-icon{
+	position: relative;
 	padding-right :5px;
-	height:90%;
+	max-width:100%;
+	max-height:100%;
 
 }
 
