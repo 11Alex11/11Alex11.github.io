@@ -58,7 +58,6 @@ h6 {
 	min-height: 100%;
 }
 
-
 /*  MENU BAR */
 .menu-bar{
 	position: relative;
@@ -141,12 +140,60 @@ h6 {
 .logo-div{
 	position: relative;
 	padding-top: 10%;
-
+	z-index: 1500;
 }
 .logo{
 	-webkit-animation:spin 1s linear infinite;
     -moz-animation:spin 1s linear infinite;
     animation:spin 1s linear infinite;
+    
+}
+
+/* LOADER */
+.loader-wrapper .loader-section{
+	background-color: #1b1b1b;
+	z-index: 1000;
+	position: fixed;
+	top:0;
+	width:51%;
+	height:100%;
+}
+.loader-wrapper .section-left{
+	left: 0;
+}
+.loader-wrapper .section-right{
+	right: 0;
+}
+.loaded .loader-wrapper .section-left {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(-100%);  /* IE 9 */
+    transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+}
+ 
+.loaded .loader-wrapper  .section-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(100%);  /* IE 9 */
+    transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+}
+/*Animations for loader*/
+
+/* add .loaded to body, then this will occur */
+.loaded .logo {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
+    transform:scale(2,2);
+}
+.logo:hover{
+	transform:scale(2,2);
+}
+.logo{
+	transition: all .2s ease-in-out;
+}
+.loaded .loader-wrapper .section-right,
+.loaded .loader-wrapper .section-left{
+	-webkit-transition: all 0.3s 0.3s ease-out; 
+    transition: all 0.3s 0.3s ease-out;
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
