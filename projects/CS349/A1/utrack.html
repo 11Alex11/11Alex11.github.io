@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>UTrack!</title>
+   
+    <link rel="stylesheet" href="css/ext/bootstrap.css"/>
+    <link rel="stylesheet" href="css/utrack.css"/>
+</head>
+<body>
+
+<div id="app_container" class="container" >
+    <div class="logoWrap">
+       <img src="images/title2.png" alt="logo" height="720" width="960">
+        <div id ="iandAButtons">
+            <button id="run_input" class="btn btn-style">Input</button>
+            <button id="run_analysis" class="btn btn-style">Analysis</button>
+        </div>  
+    </div>
+    <div id="input_div" >
+        <!-- Put HTML here to support user input of data -->
+
+        <template id="form_input_template">
+        <div id="background"></div>
+            <p class='error-text text-style'></p>
+            <div id="label_div" >
+                <p class="input-spacing">Activity:</p>
+                <p class="input-spacing">Energy Level:</p>
+                <p class="input-spacing">Stress Level:</p>
+                <p class="input-spacing">Happiness Level:</p>
+                <p class="input-spacing">Time Spent:</p>
+            </div>
+            <div class="form-buttons">
+                <button id ="submit" class = "btn btn-style">Submit</button>
+                <button id ="remove"class = "btn btn-style">Remove</button>
+            </div>
+            <div id="input_boxes_div">
+                <select id="activity" class="input-spacing">
+                    <option value="code">Writing Code</option>
+                    <option value="eat">Eating Dinner</option>
+                    <option value="sports">Playing Sports</option>
+                    <option value="study">Studying for Exams</option>
+                    <option value="lecture">Attending Lectures</option>
+                    <option value="tv">Watching TV</option>
+                </select><br>
+                <input type="text" id="energy" class="input-box-spacing"><br>
+                <input type="text" id="stress" class="input-box-spacing"><br>
+                <input type="text" id="happy" class="input-box-spacing"><br>
+                <input type="text" id="time" class="input-box-spacing"><br>
+
+            </div>
+            <div id="info_div">
+                <p class="info-spacing">(1=Exhausted, 5=Very Awake)</p>
+                <p class="info-spacing">(1=Very Stressed, 5=Very Relaxed)</p>
+                <p class="info-spacing">(1=Depressed, 5=Very Happy)</p>
+                <p class="info-spacing">minutes</p>
+                
+            </div>
+        </template>
+        <template id="time_text_template">
+            <p id="time_output">Last Data Entry: None</p> 
+        </template>
+    </div>
+
+    <div id="analysis_div">
+        <!-- Put HTML here to support users in analyzing their data -->
+        <template id= "analysis_template">
+            <div id = "radio_div">
+                <p id = "views_text" class = "text-style">Views:</p>
+                <div id="radios">
+                    <input class="view_radio radio_buttons" type="radio" name = "view_type">Table Summary<br>
+                    <input class="list_radio radio_buttons" type="radio" name = "view_type">List Summary<br>
+                    <input class="graph_radio radio_buttons" type="radio" name = "view_type">Bar Graph<br>
+
+                </div>
+            </div>
+            <template id='table_template'>
+                <div class="table_div">
+                    <table class="table_view data_view table_style">
+                        <tr>
+                            <th>Activity Tracked</th>
+                            <th>Total Time</th>
+                          </tr>
+
+                        <tr class="code_row ">
+                            <td>Writing Code</td>
+                            <td class="code_time">0</td>
+                        </tr>
+                        <tr class="eat_row alt">
+                            <td>Eating Dinner</td>
+                            <td class="eat_time">0</td>
+                        </tr>
+                        <tr class="sports_row ">
+                            <td>Playing Sports</td>
+                            <td class="sports_time">0</td>
+                        </tr>
+                        <tr class="study_row alt">
+                            <td>Studying for Exams</td>
+                            <td class="study_time">0</td>
+                        </tr>
+
+                        <tr class="lecture_row ">
+                            <td>Attending Lectures</td>
+                            <td class="lecture_time">0</td>
+                        </tr>
+                        <tr class="tv_row alt">
+                            <td>Watching TV</td>
+                            <td class="tv_time">0</td>
+                        </tr>
+                    
+                    </table>
+                </div>
+            </template>
+            <template id="graph_template">
+
+                <div id="graph_div">
+                <p class="text-style graph-text-location">Activity Percentage Bar Graph</p>
+                    <canvas id="canvas_demo" class="canvas">
+                        If you don't have an HTML5-compatible browser, you'll see this text.
+
+                        This canvas object can be removed after you understand canvas basics.
+                    </canvas>
+                    <p class = "graph_text2">Percentage</p>
+                    <div class="graph_text_div">
+                
+                    <p class = "graph_text" >Writing Code</p>
+                    <p class = "graph_text" >  Eating Dinner  </p> 
+                    <p class = "graph_text" >Playing Sports </p>  
+                    <p class = "graph_text" >Study for Exams </p>
+                    <p class = "graph_text" >Attending Lectures</p>
+                    <p class = "graph_text" >Watching TV</p>
+                    </div>
+                </div>
+                
+                <div class = "graph_options_div">
+                    <p id = "customize_text" class = "text-style">Customize:</p>
+                    <div id="checkboxes">
+                        <input id='large' class="radio_buttons" type="checkbox" name = "view_type">Highlight Largest(Red)<br>
+                        <input  id='small'class="radio_buttons" type="checkbox" name = "view_type">Highlight Shortest(Green)<br>
+                </div>
+            </div>
+            </template>
+            <template id='list_template'>
+            
+                <div class="list_div">
+                    <table class=" list_view data_view table_style">
+                    <tbody>
+                        <tr>
+                            <th>Activity</th>
+                            <th>Energy<br> Level</th>
+                            <th>Stress<br> Level</th>
+                            <th>Happiness<br> Level</th>
+                            <th>Time</th>
+                          </tr>
+                          </tbody>
+                    </table>
+                </div>
+                
+            </template>
+        </template>
+
+    </div>
+
+    <div id="unit_tests">
+        <!-- Keep this here so TAs can run your unit tests -->
+        <a href="unit_tests.html">Run Unit Tests</a>
+    </div>
+
+</div>
+<script src="js/ext/underscore.js"></script>
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/utrack.js"></script>
+</body>
+</html>

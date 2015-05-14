@@ -1,0 +1,279 @@
+body{
+	background: linear-gradient(  #ffbe63 ,#ffc77a 50%, #ffbe63 ); 	
+}
+.logoWrap {
+	position: relative;
+	width: 400px;
+	margin-top: 20px;
+}
+
+#app_container{
+	position:relative;
+	float:center;
+	width: 1030px;
+	height:100vh;
+	background: linear-gradient(#ffac38,#ffbe63,#ffac38);
+	border-right: groove;
+	border-left: ridge;
+	border-color: #fdb147;
+	border-width:20px;
+}
+.error-text{
+	color: #E12B2B;
+	position: absolute;
+	text-align: left;
+	top:200px;
+	left:300px;
+
+}
+#label_div{
+	position:absolute;
+	top:300px;
+	left:320px;
+}
+
+#background{
+	position: absolute;
+	top:270px;
+	left:200px;
+	border: 2px solid #394d5d;
+	width:600px;
+	height:400px;
+    background: #9aa2a8;
+    border-radius: 25px;
+}
+
+#input_boxes_div{
+	position:  absolute;
+	top:300px;
+	left:450px;
+}
+.input-spacing{
+	position: relative;
+	text-align: right;
+	margin-bottom: 40px;
+	top: 0px;
+	left: 0px;
+	font-weight: bold;
+}
+#info_div{
+	position:  absolute;
+	top:360px;
+	left:500px;
+
+
+}
+.info-spacing{
+	position: relative;
+	text-align: left;
+	margin-bottom: 45px;
+	top:0px;
+	left: 0px;
+	font-style: italic;
+	font-size: 12px;
+}
+.input-box-spacing{
+	position: relative;
+	text-align: center;
+	margin-bottom: 35px;
+	top:-3px;
+	left: 0px;
+	width: 40px;
+	
+    
+}
+.graph_options_div{
+	position: absolute;
+	top:500px;
+	left:150px;
+}
+#run_input{
+	width:90px;
+	position:absolute;
+	top:52px;
+	left:450px;
+	border: solid #4be300 3px;
+	outline:0;
+}
+#run_analysis{
+	width:90px;
+	position:absolute;
+	top:50px;
+	left:715px;
+	border: solid #f7e9d5 3px;
+	outline:0;
+}
+#analysis_div{
+	display:none;
+}
+#customize_text{
+position: relative;
+top:0px;
+left:-50px;
+
+}
+#time_output{
+	position: absolute;
+	top:670px;
+	left:245px;
+	text-align: left;
+
+}
+#submit{
+
+
+}
+#radio_div{
+position: absolute;
+top:360px;
+left:150px;
+
+}
+.radio_buttons{
+	position: relative;
+
+}
+#radios{
+	position: absolute;
+	top:0px;
+	left:75px;
+	width: 200px;
+}
+#checkboxes{
+	position: absolute;
+	top:0px;
+	left:75px;
+	width: 200px;
+}
+.user-interface{
+
+	
+}
+.form-buttons{
+	position: absolute;
+	top:625px;
+	left:620px;
+	text-align: right;
+
+}
+
+
+.table_div{
+	position: absolute;
+	top:360px;
+	left:500px;
+}
+
+.table_style{
+	position: relative;
+ 	
+ 	top:-100px;
+    border-collapse: collapse;
+}
+
+.table_style td, .table_style th{
+	font-size: 25px;
+    border: 1px solid #000000;
+    padding: 3px 7px 2px 7px;
+    background-color: #ffffff;
+}
+.table_style th{
+	font-size: 26px;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #394d5d;
+    color: #ffffff;
+
+}
+.table_style tr.alt td{
+	color: #000000;
+    background-color: #a8bccc;
+
+
+}
+#list_template_div{
+	position: absolute;
+	top:200px;
+	left:400px;
+	height: 379px; 
+	overflow-y: auto; 
+	overflow-x:hidden;
+}
+.list_view th{
+	font-size: 20px;
+}
+.list_view td{
+	font-size: 16px;
+}
+.list_view{
+	position: relative;
+	top:0px;
+	left:0px;
+}
+.text-style{
+	font-size: 22px;
+	font-weight: bold;
+	text-align: left;
+
+}
+
+.btn-style{
+	background: #394d5d;
+	color:#ffffff;
+	font-weight: bold;
+	outline: 0;
+}
+.btn-style:hover{
+	color:#ffffff;
+  background-image: linear-gradient(to bottom, #44c703, #40be02);
+ 
+}
+.btn-style:focus{
+	color:#ffffff;
+
+}
+.btn:active{
+
+	background-image: linear-gradient(to bottom, #44c703, #40be02);
+}
+.graph_text{
+	font-size: 12px;
+	padding-bottom:  55px;
+
+}
+.graph_text_div{
+	position: absolute;
+	text-align: right;
+	top:250px;
+	left:135px;
+	transform: rotate(-90deg);
+	transform-origin: 100% 100%;
+	height:200px;
+}
+.graph-text-location{
+	position: relative;
+	left:80px;
+}
+.graph_text2{
+position: absolute;
+	top:270px;
+	left:-30px;
+	display:inline-block;
+	font-size: 12px;
+	transform: rotate(-90deg);
+	transform-origin: left top 0;
+
+}
+
+#canvas_demo{
+
+	width:500px;
+	height:400px;
+}
+#graph_div{
+	position: absolute;
+	top:160px;
+	left:430px;
+
+}

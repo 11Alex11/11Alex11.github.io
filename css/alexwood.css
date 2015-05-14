@@ -5,7 +5,7 @@
 	color: #ffffff;
 }
 body{
-
+	/*background-image: url("../img/Mockup.png");*/
 	background-color: #1b1b1b;
    	background-position: top center !important;
 	background-repeat: no-repeat !important;
@@ -16,7 +16,7 @@ body{
    	width: 100%;
 	height: 100%;
 	margin: 0px;
-
+	overflow-x:hidden;
 }
 html{
 	width: 100%;
@@ -47,7 +47,7 @@ h6 {
 @font-face{
     font-family: "Impact";
     src: url('../fonts/Impact.ttf'),
-    url('../fonts/Impact.otf'),url('../fonts/Impact.eot'); /* IE */
+    url('../fonts/Impact.otf'),url('../fonts/Impact.eot') format('embedded-opentype'); /* IE */
 }
 
 #app-container{
@@ -56,7 +56,7 @@ h6 {
     vertical-align:bottom;
     margin:0 auto;
     height:100%;
-    overflow-x:hidden;
+    
 }
 
 /*  MENU BAR */
@@ -103,20 +103,19 @@ h6 {
 }
 .icon{
 	padding-right :5px;
-	width: 40px;
+	height: 50%;
 
 }
 .network-icon{
 	position: relative;
 	padding-right :5px;
-	max-width:100%;
-	max-height:100%;
+	height: 100%;
 
 }
-
 /*  INFORMATION DIVIDER */
 
 .information-wrapper{
+	margin-top: 0px;
 	background-color: rgba(0,0,0,0.17);
     width:80%;
     margin:0 auto -40px;
@@ -136,16 +135,15 @@ h6 {
 /* COPYRIGHT DIVIDER */
 
 .copyright-bar{
+	position: relative;
 	width: 100%;
 	height: 40px;	
 	text-align: center;
 	background-color: rgba(0,0,0,0.65);
+	z-index:500;
 }
 .push{
 	height: 40px;
-}
-.toggle-invis{
-	display: none;
 }
 /* HOME PAGE*/
 .logo-div{
@@ -215,18 +213,27 @@ h6 {
 /*Page Movements*/
 .move-left{
 	 -webkit-transform: translateX(-120%);
+	 -moz-transform:translateX(-120%);
+	 -ms-transform:translateX(-120%);
+	  transform: translateX(-120%);
 	 -webkit-transition: all 0.3s ease-in-out; 
     transition: all  0.3s ease-in-out;
 }
 .reset{
 	 -webkit-transform: translateX(0);
+	 -moz-transform:translateX(0);
+	 -ms-transform:translateX(0);
+	 transform: translateX(0);
 	 -webkit-transition: all 0.3s 0.3s ease-in-out; 
     transition: all 0.3s 0.3s ease-in-out;
 }
 .move-right-instant{
 	-webkit-transform: translateX(120%);
-	 -webkit-transition: all 0.0s 0.0s ; 
-    transition: all 0.0s 0.0s;
+	-ms-transform:translateX(120%);
+	-moz-transform:translateX(120%);
+	 transform: translateX(120%);
+	 -webkit-transition: all 0.3s 0.0s ; 
+    transition: all 0.3s 0.0s;
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
