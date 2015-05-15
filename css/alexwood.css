@@ -238,21 +238,11 @@ h6 {
 	-webkit-animation-duration:1s; -moz-animation-duration:1s;
 	animation-duration:1s;
 }
-.reset-left{
-	-webkit-animation-name:resetLeft; -moz-animation-name:resetLeft;
-	animation-name:resetLeft;
-	-webkit-animation-duration:0s; -moz-animation-duration:0s;
-	animation-duration:0s;
-
-}
-.reset-right{
-	-webkit-animation-name:resetRight; -moz-animation-name:resetRight;
-	animation-name:resetRight;
-	-webkit-animation-duration:0s; -moz-animation-duration:0s;
-	animation-duration:0s;
-}
 @-webkit-keyframes moveLeft{
-	100%{ -webkit-transform: translateX(-120%);}
+		50%{ transform: translateX(-120%);}
+	51%{ transform: translateX(120%);
+		opacity:0;}
+	100%{transform: translateX(0);}
 
 }
 @-moz-keyframes moveLeft{
@@ -260,12 +250,6 @@ h6 {
 	51%{ transform: translateX(120%);
 		opacity:0;}
 	100%{transform: translateX(0);}
-}
-@-moz-keyframes resetLeft{
-	100%{ -moz-transform: translateX(120%);}
-}
-@-moz-keyframes resetRight
-	100%{ -moz-transform: translateX(-120%);}
 }
 @keyframes moveLeft{
 	50%{ transform: translateX(-120%);}

@@ -56,13 +56,7 @@ window.addEventListener('load',function(){
 			$(".information-wrapper").toggleClass("move-right");
 		}
 		window.setTimeout(function(){
-			$('.information-wrapper').hide().load(href + " #info-section",function(){
-				$('.information-wrapper').fadeIn(200, function() {
-	                            $('information-div').animate({
-	                                height:200 +  $('information-div').height() + "px"
-	                            });
-	                        });
-			});
+			$('.information-wrapper').load(href + " #info-section");
 			window.setTimeout(function(){
 				headerWait=false;
 							$(".information-wrapper").toggleClass("move-left",false);
