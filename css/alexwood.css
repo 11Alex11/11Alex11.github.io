@@ -76,7 +76,7 @@ h6 {
 }
 .menu-bar-button{
 	font-size: 18px;
-	padding-left: 10px;
+	padding: 0 10px;
 	font-family: "Impact";
 	background-color: rgba(255,0,0,0);
 	border:none;
@@ -86,8 +86,14 @@ h6 {
 	color:#ffffff;
 	outline: none;
 	text-decoration:none;
+	transition: background-color 0.25s linear; /* vendorless fallback */
+    -o-transition:  background-color 0.25s linear; /* opera */
+    -ms-transition:  background-color 0.25s linear; /* IE 10 */
+    -moz-transition:  background-color 0.25s linear; /* Firefox */
+    -webkit-transition:  background-color 0.25s linear; /*safari and chrome */
 }
 .menu-bar-button:hover {
+
 	background-color:#5cbf2a;
 }
 .menu-bar-button:active {
@@ -162,7 +168,9 @@ h6 {
     animation:spin 1s linear infinite;
     
 }
-
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 /* LOADER */
 .loader-wrapper .loader-section{
 	background-color: #1b1b1b;
@@ -197,14 +205,27 @@ h6 {
 /* add .loaded to body, then this will occur */
 .loaded .spinner {
     opacity: 0;
-    -webkit-transition: all 0.3s ease-out; 
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition:all 0.3s ease-out;
     transition: all 0.3s ease-out;
-    transform:scale(2,2);
-}
-.spinner:hover{
-	transform:scale(2,2);
 }
 
+.logo{
+	-webkit-transform: scale(1,1);
+	 -moz-transform:scale(1,1);
+	 -ms-transform:scale(1,1);
+	  transform: scale(1,1);
+	  -webkit-transition: all 0.3s ease-in-out; 
+    transition: all  0.3s ease-in-out;
+}
+.logo:hover{
+	-webkit-transform: scale(1.1,1.1);
+	 -moz-transform:scale(1.1,1.1);
+	 -ms-transform:scale(1.1,1.1);
+	  transform: scale(1.1,1.1);
+	 -webkit-transition: all 0.3s ease-in-out; 
+    transition: all  0.3s ease-in-out;
+}
 .loaded .loader-wrapper .section-right,
 .loaded .loader-wrapper .section-left{
 	-webkit-transition: all 0.3s 0.3s ease-out; 
@@ -212,29 +233,48 @@ h6 {
 }
 /*Page Movements*/
 .move-left{
-	 -webkit-transform: translateX(-120%);
-	 -moz-transform:translateX(-120%);
-	 -ms-transform:translateX(-120%);
-	  transform: translateX(-120%);
-	 -webkit-transition: all 0.3s ease-in-out; 
+	-webkit-animation-name:moveLeft; -moz-animation-name:moveLeft;
+	animation-name:moveLeft;
+	-webkit-animation-duration:1s; -moz-animation-duration:1s;
+	animation-duration:1s;
+	-webkit-transition: all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;
     transition: all  0.3s ease-in-out;
 }
-.reset{
-	 -webkit-transform: translateX(0);
-	 -moz-transform:translateX(0);
-	 -ms-transform:translateX(0);
-	 transform: translateX(0);
-	 -webkit-transition: all 0.3s 0.3s ease-in-out; 
-    transition: all 0.3s 0.3s ease-in-out;
+@-webkit-keyframes moveLeft{
+	50%{ -webkit-transform: translateX(-120%);}
+	51%{ -webkit-transform: translateX(120%);
+		opacity:0;}
+	100%{-webkit-transform: translateX(0);}
 }
-.move-right-instant{
-	-webkit-transform: translateX(120%);
-	-ms-transform:translateX(120%);
-	-moz-transform:translateX(120%);
-	 transform: translateX(120%);
-	 -webkit-transition: all 0.3s 0.0s ; 
-    transition: all 0.3s 0.0s;
+@-moz-keyframes moveLeft{
+	50%{ -moz-transform: translateX(-120%);}
+	51%{ -moz-transform: translateX(120%);
+		opacity:0;}
+	100%{-moz-transform: translateX(0);}
 }
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@keyframes moveLeft{
+	50%{ transform: translateX(-120%);}
+	51%{ transform: translateX(120%);
+		opacity:0;}
+	100%{transform: translateX(0);}
+}
+.move-right{
+	-webkit-animation-name:moveRight; -moz-animation-name:moveRight;
+	animation-name:moveRight;
+	-webkit-animation-duration:1s; -moz-animation-duration:1s;
+	animation-duration:1s;
+	-webkit-transition: all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;
+    transition: all  0.3s ease-in-out;
+}
+@-webkit-keyframes moveRight{
+	50%{ -webkit-transform: translateX(120%);}
+	51%{ -webkit-transform: translateX(-120%);
+		opacity:0;}
+	100%{-webkit-transform: translateX(0);}
+}
+@keyframes moveRight{
+	50%{ transform: translateX(120%);}
+	51%{ transform: translateX(-120%);
+		opacity:0;}
+	100%{transform: translateX(0);}
+}
