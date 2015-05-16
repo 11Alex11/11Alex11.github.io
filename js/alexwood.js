@@ -56,12 +56,16 @@ window.addEventListener('load',function(){
 			$(".information-wrapper").toggleClass("move-right");
 		}
 		window.setTimeout(function(){
-			$('.information-wrapper').load(href + " #info-section");
-			window.setTimeout(function(){
+			$(".information-wrapper").toggleClass("paused");
+			$('.information-wrapper').load(href + " #info-section",function(){
+				$(".information-wrapper").toggleClass("paused",false);
+				window.setTimeout(function(){
 				headerWait=false;
 							$(".information-wrapper").toggleClass("move-left",false);
 							$(".information-wrapper").toggleClass("move-right",false);
 				},400);
-		},600);
+			});
+			
+		},500);
 	}
 });
