@@ -65,7 +65,7 @@ window.addEventListener('load',function(){
 							$(".information-wrapper").toggleClass("move-right",false);
 				},400);
 			});
-			
+			//50% of 1s to move off the screen, from move-left and move-right
 		},500);
 	}
 });
