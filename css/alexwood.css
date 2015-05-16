@@ -122,14 +122,17 @@ h6 {
 
 .information-wrapper{
 	margin-top: 0px;
+	border-left: solid 5px rgba(0,0,0,0.34);
+	border-right: solid 5px rgba(0,0,0,0.34);
 	background-color: rgba(0,0,0,0.17);
-    width:80%;
+    width:90%;
     margin:0 auto -40px;
-    min-height:100%;
+    z-index: 0;
+}
+.auto-height{
+	min-height:100%;
     height:auto !important;
     height:100%;
-    z-index: 0;
-
 }
 .information-div{
 	padding-top: 50px;

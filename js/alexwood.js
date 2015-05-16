@@ -20,14 +20,16 @@ window.addEventListener('load',function(){
 		var link = $(this).attr("href");
 		if(headerWait==false){
 			var index = getIndex(event.target);
-			console.log(index);
+			console.log(index + " index");
+			console.log(curIndex+ " curIndex");
 			if(index>curIndex){
 				nextPage(link,LEFT);
+				curIndex=index;
 			}
 			else if(index < curIndex){
 				nextPage(link,RIGHT);
+				curIndex=index;
 			}
-			curIndex=index;
 		}
 	});
 
@@ -40,12 +42,13 @@ window.addEventListener('load',function(){
 
 	//nextPage(LEFT);
 	function getIndex(node){
-		var index=0;
+		var ret=0;
 		while((node=node.previousElementSibling)!=null){
-			index++;
+			ret++;
 		}
-		return index;
+		return ret;
 	}
+
 	function nextPage(href,dir){
 		headerWait = true;
 		console.log(dir);
@@ -56,13 +59,21 @@ window.addEventListener('load',function(){
 			$(".information-wrapper").toggleClass("move-right");
 		}
 		window.setTimeout(function(){
-			$(".information-wrapper").toggleClass("paused");
-			$('.information-wrapper').load(href + " #info-section",function(){
+			$(".information-wrapper").toggleClass("paused",true);
+			var $mydiv = $('.information-wrapper');
+			//toggle height properties off so it can animate
+			$mydiv.toggleClass('auto-height',false);
+			$mydiv.css('height', $mydiv.height());
+			$mydiv.load(href + " #info-section",function(){
+				$(this).wrapInner('<div/>');
+   var newheight = $('div:first',this).height();
+   $(this).animate( {height: newheight} );
 				$(".information-wrapper").toggleClass("paused",false);
 				window.setTimeout(function(){
-				headerWait=false;
+							headerWait=false;
 							$(".information-wrapper").toggleClass("move-left",false);
 							$(".information-wrapper").toggleClass("move-right",false);
+							$mydiv.toggleClass('auto-height',false);
 				},400);
 			});
 			//50% of 1s to move off the screen, from move-left and move-right
