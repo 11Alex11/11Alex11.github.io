@@ -62,18 +62,17 @@ window.addEventListener('load',function(){
 			$(".information-wrapper").toggleClass("paused",true);
 			var $mydiv = $('.information-wrapper');
 			//toggle height properties off so it can animate
-			$mydiv.toggleClass('auto-height',false);
-			$mydiv.css('height', $mydiv.height());
+			//$mydiv.css('height', $mydiv.height());
 			$mydiv.load(href + " #info-section",function(){
-				$(this).wrapInner('<div/>');
-   var newheight = $('div:first',this).height();
-   $(this).animate( {height: newheight} );
+	//			$(this).wrapInner('<div/>');
+   //var newheight = $('div:first',this).height();
+   //$(this).animate( {height: newheight} );
 				$(".information-wrapper").toggleClass("paused",false);
 				window.setTimeout(function(){
 							headerWait=false;
 							$(".information-wrapper").toggleClass("move-left",false);
 							$(".information-wrapper").toggleClass("move-right",false);
-							$mydiv.toggleClass('auto-height',false);
+							//$mydiv.toggleClass('auto-height',false);
 				},400);
 			});
 			//50% of 1s to move off the screen, from move-left and move-right
