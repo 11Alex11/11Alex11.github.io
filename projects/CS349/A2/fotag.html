@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Fotag!</title>
+
+    <!--
+    All of your CSS must go in css/fotag.css. Do not add styles to individual elements.
+    All of your CSS must be your own -- you may not use third-party CSS, like Bootstrap.
+    -->
+    <link rel="stylesheet" href="css/fotag.css"/>
+    <style>
+        .marking-button {
+            float:right;
+        }
+        .marking-div-clear {
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+
+<!-- This header can be replaced 
+<h1>Fotag!</h1>
+Import, organize, and rate your photos!
+-->
+<div id="app-container">
+<!--
+         An attachment point to place all of your dynamically created content. Do not remove or
+         rename this div.
+    -->
+
+    <template id="toolbar-template">
+    <div class="toolbar text-font">
+            <div class="title-wrapper">
+            <div class="title">
+                <h1 class="title-style">Fotag!</h1>
+                <span class="info-style">Import, organize, and rate your photos!</span>
+            </div>
+            </div>
+        <div class="tool-wrapper text-style">
+            <button class="grid-view toolbar-button toolbar-spacing image-border" ></button>
+            <button class="list-view toolbar-button toolbar-spacing image-border"></button>
+            <div class="file-wrapper">
+
+                <template id="file-chooser" class="tool-file">
+                    <input type="file" class="files-input files-border" name="file_results[]" multiple />
+                    <output id="list"></output>
+                 </template>
+
+             </div>            
+            <div class="clear-float"></div>
+        </div>        
+        <div >
+            <span class="grid-text toolbar-text text-style">Grid View</span>
+            <span class="list-text toolbar-text text-style">List View</span>
+
+            <div class="float-right filter-wrapper files-border">
+
+                <span class=" text-style">Filter by: </span> 
+                <button class = "star1"></button>
+                 <button class = "star2"></button>
+                 <button class = "star3"></button>
+                 <button class = "star4"></button>
+                 <button class = "star5"></button>
+            </div>                  
+            <div class="clear-float"></div>
+        </div>          
+    </div>
+    </template>
+
+    <template id="image-template">
+            <div class="image-div image-border">
+                <!-- <button class="close-image  icon-border"></button>-->
+                <div class="overlay"></div>
+                <img class="image-render " ></img>
+                <!--<div class="clear-float text-style"></div>-->
+                 <span class=" image-name text-style">This is where imagename is</span><br>
+                 <span class=" image-time text-style">This is where timestamp is</span><br>
+                 <button class = "star1"></button>
+                 <button class = "star2"></button>
+                 <button class = "star3"></button>
+                 <button class = "star4"></button>
+                 <button class = "star5"></button><br>
+                <span class="image-caption text-style">This is where caption is</span>
+            </div>
+        </template>
+
+        <template id="collection-template">
+
+        </template>
+    <div id="background-div">
+ <div class="filter-expand"></div>
+    
+        <div id="image-wrapper">
+
+        </div>
+   
+
+<!-- A template for a file chooser, to select multiple files. See FileChooser in view.js. -->
+<!--<template id="file-chooser">
+    <div>
+    <input type="file" class="files-input" name="file_results[]" multiple />
+    <output id="list"></output>
+    </div>
+</template>-->
+
+<!-- Keep this here so TAs can run your unit tests -->
+    <div class="clear-float text-style"></div>
+        <div id="unit-tests">
+
+            <!-- This button is for marking purposes to test your architecture. Do not remove it-->
+            <button class="marking-button">Mark Me!</button>
+            <div class="marking-div-clear"></div>
+
+            <a href="unit_tests.html">Run Unit Tests</a>
+        </div>
+        </div>
+</div>
+<script src="js/ext/underscore.js"></script>
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/fotag.js"></script>
+<script src="js/markers_code.js"></script>
+</body>
+</html>
