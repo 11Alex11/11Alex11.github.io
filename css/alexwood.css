@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-     -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     font-size: 16px;
 	color: #ffffff;
 }
@@ -126,6 +126,13 @@ h6 {
 	border-right: solid 5px rgba(0,0,0,0.34);
 	background-color: rgba(0,0,0,0.17);
     width:90%;
+    margin:0 auto -40px;
+    z-index: 0;
+}
+.information-wrapper2{
+	margin-top: 0px;
+
+    height: 100%;
     margin:0 auto -40px;
     z-index: 0;
 }
@@ -271,6 +278,12 @@ h6 {
 	51%{ -webkit-transform: translateX(-120%);
 		opacity:0;}
 	100%{-webkit-transform: translateX(0);}
+}
+@-moz-keyframes moveRight{
+	50%{ transform: translateX(120%);}
+	51%{ transform: translateX(-120%);
+		opacity:0;}
+	100%{transform: translateX(0);}
 }
 @keyframes moveRight{
 	50%{ transform: translateX(120%);}
