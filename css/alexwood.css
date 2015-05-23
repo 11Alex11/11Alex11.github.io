@@ -297,3 +297,17 @@ h6 {
     -o-animation-play-state:paused; 
     animation-play-state:paused;
 }
+
+/* PROJECTS */
+.project-title{
+	font-size: 24px;
+	font-family: 'Impact';
+	margin:10px;
+	color: #dddddd;
+}
+.projects-div{
+	padding: 20px 20px;
+	position: relative;
+	margin: 0 auto;
+	float: left;
+}
