@@ -3,6 +3,7 @@ var LEFT = "LEFT";
 var RIGHT = "RIGHT";
 window.addEventListener('load',function(){
 	var historyDir=[RIGHT];
+	var historyIndex=[0];
 	var header = $('.navigation-bar');
 	var headerWait=false;
 	$('body').toggleClass('loaded');
@@ -24,10 +25,12 @@ window.addEventListener('load',function(){
 			console.log(curIndex+ " curIndex");
 			if(index>curIndex){
 				nextPage(link,LEFT,true);
+				historyIndex.push(curIndex);
 				curIndex=index;
 			}
 			else if(index < curIndex){
 				nextPage(link,RIGHT,true);
+				historyIndex.push(curIndex);
 				curIndex=index;
 			}
 		}
@@ -86,13 +89,15 @@ window.addEventListener('load',function(){
 
 	window.onpopstate=function(){
 		var dir = historyDir[historyDir.length-1];
+		curIndex = historyIndex[historyIndex.length-1];
 		if(dir==LEFT){
 			dir =RIGHT;
 		}
 		else{
 			dir=LEFT;
 		}
-		nextPage(location.href,dir,false);
 		historyDir.pop();
+		historyIndex.pop();
+		nextPage(location.href,dir,false);
 	}
 });
