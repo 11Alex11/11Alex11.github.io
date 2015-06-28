@@ -72,6 +72,16 @@ window.addEventListener('load',function(){
 				historyDir.push(dir);
 			}
 			$mydiv.load(href + " #info-section",function(){
+				/* Page Specific Functions */
+				var path = window.location.pathname;
+				var page = path.split("/").pop();
+				if(page=="projects.html"){
+					$('.projects-div').delegate("button","click",function(event){
+						var showDiv = event.target.nextElementSibling;
+						$(showDiv).toggleClass("hide-content");
+					});
+					console.log("OREJC");
+				}
 				//$(this).wrapInner('<div/>');
    //var newheight = $('div:first',this).height();
    //$(this).animate( {height: newheight},300 );
