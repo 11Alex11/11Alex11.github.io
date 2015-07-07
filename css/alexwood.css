@@ -343,5 +343,6 @@ h6 {
 	top:1px;
 }
 .hide-content{
-	display: none;
+	height: 0;
+	overflow: hidden;
 }

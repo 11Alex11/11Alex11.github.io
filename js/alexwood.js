@@ -78,7 +78,20 @@ window.addEventListener('load',function(){
 				if(page=="projects.html"){
 					$('.projects-div').delegate("button","click",function(event){
 						var showDiv = event.target.nextElementSibling;
-						$(showDiv).toggleClass("hide-content");
+						console.log(showDiv)
+						var divHeight = $(showDiv).height()
+						var autoHeight;
+						console.log(divHeight);
+						if(divHeight==0){
+							$(showDiv).css('height', 'auto');
+							autoHeight=$(showDiv).height();
+							$(showDiv).css('height', '0');
+							$(showDiv).animate( {height:autoHeight},300 );
+						}
+						else{
+							
+							$(showDiv).animate( {height: '0'},300 );
+						}
 					});
 					console.log("OREJC");
 				}
