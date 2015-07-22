@@ -13,8 +13,24 @@ window.addEventListener('load',function(){
 	var content = $("information-wrapper");
 
 	var navTotal = header[0].children.length;
+	//Determine what way to slide
+	var path = window.location.pathname;
+	var page = path.split("/").pop();
 	var curIndex=0;
+	if(page=="index.html"){
+		curIndex=0;
+	}
+	else if(page=="about.html"){
+		curIndex=1;
+	}
+	else if(page=="projects.html"){
+		curIndex=2;
+	}
+	else if(page=="resume.html"){
+		curIndex=3;
+	}
 	var index=curIndex;
+	nextPage(path,LEFT,true);
 	/*Each button is given an href and this will determine what button is clicked and open the href*/
 	/*Need to change to xml request*/
 	$('.navigation-bar').delegate("button","click",function(event){

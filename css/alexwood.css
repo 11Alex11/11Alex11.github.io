@@ -28,7 +28,8 @@ font-family: 'Impact';
 }
 p{
 	font-size: 12px;
-	font-family: "Arial"
+	font-family: "Arial";
+	font-weight:bold;
 }
 h1 {
 	font-size: 36px;
@@ -143,7 +144,7 @@ h6 {
 .auto-height{
 	min-height:100%;
     height:auto !important;
-    height:100%;
+  
 }
 .information-div{
 	padding-top: 20px;
@@ -313,6 +314,7 @@ h6 {
 	padding: 20px 20px;
 	position: relative;
 	margin: 0 auto;
+	max-width: 1000px;
 }
 
 .project-button{
@@ -334,7 +336,25 @@ h6 {
     -moz-transition:  background-color 0.25s linear; /* Firefox */
     -webkit-transition:  background-color 0.25s linear; /*safari and chrome */
 }
-.project-button:hover {
+.project-link{
+	display: block;
+	width: 100%;
+
+	font-family: "Impact";
+	background-color: rgba(255,0,0,0);
+	border:none;
+	cursor:pointer;
+	text-align: center;
+	color:#ffffff;
+	outline: none;
+	text-decoration:none;
+	transition: background-color 0.25s linear; /* vendorless fallback */
+    -o-transition:  background-color 0.25s linear; /* opera */
+    -ms-transition:  background-color 0.25s linear; /* IE 10 */
+    -moz-transition:  background-color 0.25s linear; /* Firefox */
+    -webkit-transition:  background-color 0.25s linear; /*safari and chrome */
+}
+.project-button:hover,.project-link:hover {
 
 	background-color:#5cbf2a;
 }
@@ -345,4 +365,35 @@ h6 {
 .hide-content{
 	height: 0;
 	overflow: hidden;
+}
+
+.divider-div{
+	text-align: center;
+	height: auto;
+	width: 100%;
+}
+
+
+.round-top{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.round-bottom{
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.paragraph{
+
+}
+.even{
+	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
+	background-color: rgba(0,0,0,.25)
+}
+.odd{
+	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)); 
+	background-color: rgba(0,0,0,.5)
+}
+.project-img{
+	max-width: 50%;
+	height: auto;
 }
