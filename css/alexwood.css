@@ -24,12 +24,13 @@ html{
 }
 h1,h2,h3,h4,h5,h6{
 	color: #dddddd;
-font-family: 'Impact';
+	font-family: 'Impact';
 }
 p{
 	font-size: 12px;
 	font-family: "Arial";
 	font-weight:bold;
+	padding: 5px 0 5px 0;
 }
 h1 {
 	font-size: 36px;
@@ -74,6 +75,7 @@ h6 {
 	height: 40px;
 	text-align: center;
 	background-color: rgba(0,0,0,0.65);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.075) inset, 0 0 10px rgba(0, 0, 0, 0.6);
 }
 .navigation-bar{
 	display: inline-block;
@@ -111,6 +113,7 @@ h6 {
 }
 .network-bar{
 	height: 100%;
+	box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.075) inset, 0 0 10px rgba(0, 0, 0, 0.6);
 }
 .icon{
 	padding-right :5px;
@@ -329,7 +332,7 @@ h6 {
 	cursor:pointer;
 	color:#ffffff;
 	outline: none;
-	text-decoration:none;
+	text-decoration:underline;
 	transition: background-color 0.25s linear; /* vendorless fallback */
     -o-transition:  background-color 0.25s linear; /* opera */
     -ms-transition:  background-color 0.25s linear; /* IE 10 */
@@ -337,14 +340,14 @@ h6 {
     -webkit-transition:  background-color 0.25s linear; /*safari and chrome */
 }
 .project-link{
-	display: block;
+	float: left;
+	padding: 5px 0 5px 0;
 	width: 100%;
-
 	font-family: "Impact";
 	background-color: rgba(255,0,0,0);
 	border:none;
+	font-size: 20px;
 	cursor:pointer;
-	text-align: center;
 	color:#ffffff;
 	outline: none;
 	text-decoration:none;
@@ -365,6 +368,7 @@ h6 {
 .hide-content{
 	height: 0;
 	overflow: hidden;
+	padding: 0 8px;
 }
 
 .divider-div{
@@ -383,17 +387,31 @@ h6 {
 	border-bottom-right-radius: 10px;
 }
 .paragraph{
-
+	font-size: 16px;
+	color: #ffffff;
+	
 }
 .even{
 	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
-	background-color: rgba(0,0,0,.25)
+	background-color: rgba(0,0,100,.25);
+	box-shadow: 0px 2px 1px #000000;
 }
 .odd{
 	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)); 
-	background-color: rgba(0,0,0,.5)
+	background-color: rgba(100,0,0,.25)
 }
 .project-img{
 	max-width: 50%;
 	height: auto;
+}
+
+.divider{
+	margin: auto;
+	width: 80%;
+	height: 5px;
+	background-color: #ffffff;
+}
+.chrome-logo{
+	height: 16px;
+	width: auto;
 }
