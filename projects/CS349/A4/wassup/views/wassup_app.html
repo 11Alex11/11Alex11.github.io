@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../static/css/wassup.css" />
+        <link rel="stylesheet" type="text/css" href="../static/css/ext/bootstrap.min.css"/>
+
+  </head>
+  <body>
+
+<div id="app-container" >
+
+
+
+
+    <div class="title-border">
+
+      <img class="logo align-center" src="../static/wassup_logo2.png">
+
+        
+
+
+    </div>
+    
+
+    <div class="centered-canvas files-border">
+
+
+      <div class="message-div">
+        <span class="sup-text">You have&nbsp</span> <span class="message-num">?</span> <span class= "sup-text">&nbspsups!</span>
+      </div>
+        <div class="centered-canvas2">
+        <div class="top-left">
+        <button id="remove"class="list-button no-outline"><span class="glyphicon glyphicon-remove icon-change " aria-hidden="true"></span></button>
+        </div>
+        <canvas class="canvas ">
+        </canvas>
+        
+        <div class="canvas-buttons left">
+        <div class="middle-canvas">
+        <p id="user"></p>
+        <p id="timestamp"></p>
+        </div>
+        <button id="next"class="list-button no-outline"><span class="glyphicon glyphicon-circle-arrow-right icon-change" aria-hidden="true"></span></button>
+        <p class="curSup user">-/-</p>
+        </div>
+
+        <div class="canvas-buttons ">
+        <button id="prev"class="list-button no-outline"><span class="glyphicon glyphicon-circle-arrow-left icon-change " aria-hidden="true"></span></button>
+        </div>
+        </div>
+
+
+        <div class="col-lg-6 boot-input">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Enter Username">
+            <span class="input-group-btn">
+              <button  id="add_friend" class="btn btn-default my-btn2" type="button">Add Friend</button>
+            </span>
+          </div>
+        </div>
+
+
+        <div class="dropup">
+        <button id="friend_list_btn" class="align-right2 my-btn btn dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Friends List
+        <span class="caret"></span></button>
+        
+        <ul id="send_message" class='dropdown-menu dropdown-menu-right dropup'  aria-labelledby="menu1">
+            <li id="send"role="presentation" class="list-border "><a class="send-text list-a" href="#">Send Sups</a><button class="list-button no-outline"><span class="glyphicon glyphicon-send icon-send " aria-hidden="true"></span><p id="sent-text"></p></button></li>
+
+            <li role="presentation" class="divider"></li>
+
+        <ul id="friends_list" class="scroll-menu" role="menu" aria-labelledby="menu1">
+
+        
+           
+        </ul>  
+           <li id="list_end"role="presentation" class="divider"></li>  
+          </ul>
+
+        
+      </div>
+
+
+
+
+    </div>
+
+
+    <div class="menu-div">
+         <form  method="POST" id="" action="/logout" enctype="multipart/form-data">
+        <input class=" my-btn btn align-right menu-btn"type="submit" value="Logout" >
+        </form>
+        <input id="public_btn"class=" my-btn btn align-left menu-btn"type="submit" value="Public Server" >
+        <input id="private_btn"class="my-btn btn align-left menu-btn"type="submit" value="Private Server" >
+        </div>
+    </div>
+
+    <script src="../static/js/ext/underscore.js"></script>
+    <script type="text/javascript" src="../static/js/ext/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../static/js/ext/bootstrap.js"></script>
+    <script type="text/javascript" src="../static/js/wassup.js"></script>
+  </body>
+</html>

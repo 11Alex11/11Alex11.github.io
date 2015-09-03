@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/css/wassup.css" />
+  </head>
+  <body>
+    <img class="logo" src="/static/wassup_logo.png"/>
+
+    %if error_message:
+    <p>
+      <em>{{error_message}}</em>
+    </p>
+    %end
+
+    <form method="POST" id="" action="/logged_in" enctype="multipart/form-data">
+      Desired username: <input type="text" name="user_id" />
+      Full name: <input type="text" name="full_name" />
+      <input type="submit" value="Log In" />
+
+    </form>
+
+    <script src="static/js/ext/underscore.js"></script>
+    <script type="text/javascript" src="/static/js/wassup.js"></script>
+  </body>
+</html>

@@ -43,6 +43,7 @@ window.addEventListener('load', function() {
         _.each(
             files,
             function(file) {
+              console.log(file);
                // var newDiv = document.createElement('div');
                // var fileInfo = "File name: " + file.name + ", last modified: " + file.lastModifiedDate;
                // newDiv.innerText = fileInfo;

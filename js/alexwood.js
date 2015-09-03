@@ -89,10 +89,27 @@ window.addEventListener('load',function(){
 			}
 			$mydiv.load(href + " #info-section",function(){
 				/* Page Specific Functions */
+				var showTri = false;
 				var path = window.location.pathname;
 				var page = path.split("/").pop();
 				if(page=="projects.html"){
 					$('.projects-div').delegate("button","click",function(event){
+						
+						if(event.target.innerHTML=="Triangular"){
+							var triangularTemp=$('#triangular-template').html();
+							console.log(triangularTemp)
+							showTri = !showTri;
+							console.log(showTri)
+							if(showTri){
+								$('.triangular-div').append(triangularTemp);
+								
+							}
+							else{
+								$('.triangular-div').empty();
+							}
+							
+
+						}
 						var showDiv = event.target.nextElementSibling;
 						console.log(showDiv)
 						var divHeight = $(showDiv).height()

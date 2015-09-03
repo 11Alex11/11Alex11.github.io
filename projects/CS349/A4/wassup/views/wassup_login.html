@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../static/css/wassup.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/ext/bootstrap.min.css"/>
+  </head>
+  <body>
+
+    %if error_message:
+    <p>
+      <em>{{error_message}}</em>
+    </p>
+    %end
+    <div class = "centered files-border ">
+
+    <img class="logo-login" src="../static/wassup_logo2.png"/>
+      <div class="align-center">
+      <form  method="POST" id="" action="/logged_in" enctype="multipart/form-data">
+
+        <div class="align-left" >
+          <p class="align-right">Desired username:&nbsp </p><br>
+          <p p class="align-right text-padding">Full name:&nbsp </p>
+        </div>
+
+        <div  class="align-left">
+          <input id="user_id" class="input-text"type="text" name="user_id" /><br>
+          <input id="full_name" class="text-padding input-text" type="text" name="full_name" /><br>
+          <input id="login_btn"class="align-right my-btn btn"type="submit" value="Log In" />
+        </div>
+
+      </form>
+      </div>
+
+    </div>
+    <script src="../static/js/ext/underscore.js"></script>
+    <script type="text/javascript" src="../static/js/ext/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../static/js/ext/bootstrap.js"></script>
+ <!--   <script type="text/javascript" src="../static/js/wassup.js"></script> -->
+  </body>
+</html>

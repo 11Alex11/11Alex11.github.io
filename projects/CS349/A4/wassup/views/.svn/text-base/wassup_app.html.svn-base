@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/css/wassup.css" />
+  </head>
+  <body>
+    <img class="logo" src="/static/wassup_logo.png"/>
+    <p>
+      TODO
+    </p>
+
+    <script src="static/js/ext/underscore.js"></script>
+    <script type="text/javascript" src="/static/js/wassup.js"></script>
+  </body>
+</html>

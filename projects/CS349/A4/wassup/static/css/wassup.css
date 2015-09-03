@@ -1,0 +1,410 @@
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+		color: #ffffff;
+}
+body{
+	background-image: url("../WassupBackground2.png");
+
+	background-size: cover;
+	background-position: top center !important;
+	background-repeat: no-repeat !important;
+	background-attachment: fixed;
+	margin:0px;
+	width: 100%;
+	height: 100%;
+}
+
+p{
+	margin: 10px;
+}
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#app-container{
+	height:100%;
+	width: 100%;
+
+}
+.logo-login{
+		width:100%;
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+}
+.logo{
+		width:80%;
+		max-width: 120px;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+@media screen and (min-width: 400px) and (min-device-width: 400px) {
+	.logo {
+		width:100%;
+		max-width: 200px;
+		top:-1000px;
+	}
+}
+
+.centered{
+	max-width: 600px;
+	max-height: 400px;
+	position:absolute;
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+    overflow:auto;
+
+}
+
+.centered-canvas{
+	max-width: 600px;
+	position:relative;
+    top:5%;
+    margin:auto;
+    overflow:auto;
+    display: block;
+}
+.centered-canvas2{
+	width: 90%;
+	height: 90%;
+	position:relative;
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+    overflow:auto;
+
+}
+.align-center{
+	display: inline-block;
+}
+.align-right{
+	float:right;
+}
+.align-right2{
+	float:right;
+	margin-right: 13px;
+}
+.align-left{
+	float:left;
+}
+.files-border{
+	margin-left: auto;
+	margin-right: auto;
+	width:100%;
+ 	padding:5px 5px; 
+	border:solid 2px #deddfd; 
+	border-radius: 5px; 
+	font-weight:bold; 
+	background:rgba(86,61,124,.7);  
+	overflow: auto;
+   text-align: center;
+
+}
+.list-border{
+	max-width: 300px !important;
+	width:100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+ 	padding:5px 5px; 
+
+	font-weight:bold; 
+	background:#ffffff;
+	overflow: auto;
+   text-align: center;
+
+}
+.list-border:hover{
+
+	background:#bcbcd0;
+}
+.text-padding{
+	margin-top: 10px;
+}
+
+.list-a{
+	float:left;
+	padding: 3px 20px;
+	  -webkit-user-select: none;
+}
+.list-a:hover{
+	background:#bcbcd0 !important;
+}
+.input-text{
+
+	color: #000000;
+}
+.boot-input{
+	width: 100% !important;
+	width: 100% !important;
+}
+.my-btn {
+	margin-top: 10px;
+	 background-color: #1a387b  !important;
+	 font-weight: bold !important;
+ border-width: 2px !important;
+  border-color: #deddfd !important;
+}
+
+.my-btn2 {
+	color: #ffffff !important;
+	background-color: #1a387b  !important;
+	font-weight: bold !important;
+  	border-color: #deddfd !important;
+
+
+}
+.my-btn:hover,.my-btn2:hover{
+	color: #ffffff !important;
+	background-color: #3a387b   !important;
+}
+.my-btn:focus{
+	color: #ffffff !important;
+}
+
+.title-border{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+
+	width:100%;
+
+ 	padding:5px 5px; 
+
+	border-bottom:solid 2px #deddfd; 
+
+	background:rgba(86,61,124,.7)  ;
+	overflow: auto;
+    text-align: center;
+	width:100%;
+	border-bottom: 2px solid #deddfd;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.075) inset, 0 0 25px rgba(0, 0, 0, 0.6);
+}
+.canvas-div{
+
+position: relative;
+	width:100%;
+	height: 100%;
+	border: 2px solid #deddfd;
+
+
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	
+
+
+	
+	background:rgba(86,61,124,.7);  
+
+  -webkit-user-select: none;
+
+
+}
+.sup-text{
+	font-size: 26px;
+
+	float: left;
+
+}
+.send-text{
+	font-size: 26px;
+	line-height: 0px;
+	font-weight: bold !important;
+	color: rgba(86,61,124,1)  !important;
+
+	float: left;
+
+}
+
+.server-text{
+font-size: 26px;
+	line-height: 100%;
+}
+.menu-div{
+	display: inline-block;
+	width: 100%;
+	bottom: 0px;
+	position: fixed;
+
+
+ 	padding:5px 5px; 
+
+	border-top:solid 2px #deddfd; 
+
+	background:rgba(86,61,124,.7)   ;
+	overflow: auto;
+    text-align: center;
+	border-bottom: 2px solid #deddfd;
+	z-index: 9;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.075) inset, 0 0 25px rgba(0, 0, 0, 0.6);
+}
+.menu-btn{
+margin-top: 0px;
+margin-left: 2px;
+margin-right: 2px;
+}
+.message-num{
+color:#fecf2f;
+font-size: 52px;
+float: left;
+
+}
+.message-div{
+	display: inline-block;
+	line-height: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.canvas{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.075) inset, 0 0 25px rgba(0, 0, 0, 0.6);
+	border: 1px solid #dcdfe1;
+}
+.canvas-buttons{
+	position: relative;
+	text-align: center;
+	padding-bottom: 10px;
+	
+}
+.scroll-menu{
+	height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+padding: 0px !important;
+}
+
+
+.list-border{
+	
+
+}
+.list-border:hover{
+
+	background:#bcbcd0;
+}
+#send-message{
+	position: absolute;
+}
+
+.list-button{
+float:right;
+position: relative;
+display: inline-block;
+
+background-color: transparent;
+
+	
+	border:none !important;
+	border-radius:4px !important;
+
+		text-align: center ;
+}
+@media screen and (min-width: 600px) and (min-device-width: 600px) {
+	
+	.scroll-menu{
+    max-height: 400px;
+
+	}
+}
+.icon{
+	vertical-align: middle;
+	color:#000000;
+}
+
+.icon-send{
+vertical-align: middle;
+	color:#000000;
+	font-size: 35px;
+}
+
+.icon-change{
+
+	color:rgba(0,0,0,.7);
+	font-size: 35px;
+}
+
+.canvas-buttons{
+	position: absolute;
+	bottom: 0;
+	
+}
+.icon-change:hover{
+	color:rgba(0,0,0,.9);
+}
+.left{
+		left: 0;
+		display: inline-block;
+		text-align: center;
+		vertical-align: middle;
+		width: 100%;
+}
+.curSup{
+	text-align: center !important;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	color:rgba(0,0,0,.7) !important;
+	width: 25%;
+	top:5px;
+
+}
+.top-left{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.middle-canvas{
+	position: relative;
+	left: -5px !important;
+	top:0;
+	line-height: 100%;
+	cursor:default;
+    -webkit-user-select: none;
+}
+#timestamp{
+	color:rgba(0,0,0,.7) !important;
+	text-align: right;
+	font-style: italic;
+	font-size: 60%;
+}
+
+#user{
+	color:rgba(0,0,0,.7) !important;
+	text-align: right;
+	font-size: 80%;
+
+}
+@media screen and (min-width: 400px) and (min-device-width: 400px) {
+	#user{
+		font-size: 100%;
+	}
+	#timestamp{
+		font-size: 80%;
+	}
+#sent-text{
+	position: absolute;
+	color:rgba(51,122,183,1) !important;
+	line-height: 70%;
+
+
+}
+.list-header{
+	border:solid 1px rgba(164,192,254,1)!important;
+	border-radius: 4px;
+	
+}
+
+.no-outline{
+	outline: 0;
+}
