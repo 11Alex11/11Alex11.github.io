@@ -26,11 +26,12 @@ h1,h2,h3,h4,h5,h6{
 	color: #dddddd;
 	font-family: 'Impact';
 }
-p{
+p,li{
 	font-size: 12px;
 	font-family: "Arial";
 	font-weight:bold;
 	padding: 5px 0 5px 0;
+	color: rgba(255,255,255,.9);
 }
 li{
 	font-size: 12px;
@@ -341,7 +342,6 @@ h6 {
 	cursor:pointer;
 	color:#ffffff;
 	outline: none;
-	text-decoration:underline;
 	transition: background-color 0.25s linear; /* vendorless fallback */
     -o-transition:  background-color 0.25s linear; /* opera */
     -ms-transition:  background-color 0.25s linear; /* IE 10 */
@@ -349,23 +349,34 @@ h6 {
     -webkit-transition:  background-color 0.25s linear; /*safari and chrome */
 }
 .project-link{
+	display: inline-block;
 	float: left;
 	padding: 5px 0 5px 0;
+	margin-bottom: 5px;
 	width: 100%;
 	font-family: "Impact";
-	background-color: rgba(255,0,0,0);
+	background-color: rgba(255,255,255,0.05);
 	border:none;
 	font-size: 20px;
 	cursor:pointer;
 	color:#ffffff;
 	outline: none;
 	text-align: center;
-	text-decoration:none;
+	text-decoration: none;
 	transition: background-color 0.25s linear; /* vendorless fallback */
     -o-transition:  background-color 0.25s linear; /* opera */
     -ms-transition:  background-color 0.25s linear; /* IE 10 */
     -moz-transition:  background-color 0.25s linear; /* Firefox */
     -webkit-transition:  background-color 0.25s linear; /*safari and chrome */
+}
+.language-text{
+	font-size: 10px;
+	padding-top: 5px;
+	color: rgba(255,255,255,.7);
+	font-family: "Arial";
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none !important;
 }
 .project-button:hover,.project-link:hover {
 
@@ -402,13 +413,15 @@ h6 {
 	
 }
 .even{
+
 	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
 	background-color: rgba(0,0,100,.25);
 	box-shadow: 0px 2px 1px #000000;
 }
 .odd{
+
 	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)); 
-	background-color: rgba(100,0,0,.25)
+	background-color: rgba(100,0,0,.25);
 }
 .project-img{
 	max-width: 40%;
@@ -440,8 +453,13 @@ h6 {
 
 .lighter-div{
 	background-color: rgba(0,0,0,0.2);
-	padding: 10px 5px;
-	margin-bottom: 15px;
+	border: 2px solid;
+	border-radius: 5px;
+	border-color: rgba(255,255,255,.5);
+	padding: 0px 5px;
+	margin-bottom: 20px;
+	margin-top: 5px;
+	overflow: hidden;
 }
 
 .triangular-div {

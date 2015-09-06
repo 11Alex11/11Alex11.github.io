@@ -52,6 +52,11 @@ window.addEventListener('load',function(){
 		}
 	});
 
+	$('.enlarge').delegate("button","click",function(event){
+		console.log("clicked");
+		event.target.style.width="90vw";
+	});
+
 
 
 
