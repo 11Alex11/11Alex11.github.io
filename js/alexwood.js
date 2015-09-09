@@ -10,7 +10,7 @@ window.addEventListener('load',function(){
 	$('logo').toggleClass('logo');
 	var logo = document.getElementsByClassName("logo")[0];
 	var rotate = 0;
-	var content = $("information-wrapper");
+	var content = $(".information-wrapper");
 
 	var navTotal = header[0].children.length;
 	//Determine what way to slide
@@ -50,6 +50,11 @@ window.addEventListener('load',function(){
 				curIndex=index;
 			}
 		}
+	});
+
+	$('.network-bar').delegate("button","click",function(event){
+		var link = $(this).attr("href");
+		window.open(link,'_blank');
 	});
 
 	$('.enlarge').delegate("button","click",function(event){
@@ -99,7 +104,7 @@ window.addEventListener('load',function(){
 				var page = path.split("/").pop();
 				if(page=="projects.html"){
 					$('.projects-div').delegate("button","click",function(event){
-						
+
 						if(event.target.innerHTML=="Triangular"){
 							var triangularTemp=$('#triangular-template').html();
 							console.log(triangularTemp)

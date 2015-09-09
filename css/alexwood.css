@@ -23,14 +23,14 @@ html{
 	height: 100%;
 }
 h1,h2,h3,h4,h5,h6{
-	color: #dddddd;
+	color: #ffffff;
 	font-family: 'Impact';
 }
 p,li{
-	font-size: 12px;
-	font-family: "Arial";
-	font-weight:bold;
-	padding: 5px 0 5px 0;
+	font-size: 14px;
+	font-family: 'Source Sans Pro', sans-serif;
+	line-height: 1.618;
+	padding: 5px 5px 5px 5px;
 	color: rgba(255,255,255,.9);
 }
 li{
@@ -42,6 +42,8 @@ li{
 }
 h1 {
 	font-size: 36px;
+	padding-bottom: 50px;
+	padding-top: 50px;
 }
 h2 {
 	font-size: 32px;
@@ -70,7 +72,7 @@ h6 {
     vertical-align:bottom;
     margin:0 auto;
     height:100%;
-    
+
 }
 
 /*  MENU BAR */
@@ -131,7 +133,7 @@ h6 {
 }
 .network-icon{
 	position: relative;
-	padding-right :5px;
+	padding: 3px 0;
 	height: 40px;
 
 }
@@ -141,25 +143,28 @@ h6 {
 	margin-top: 0px;
 	border-left: solid 5px rgba(0,0,0,0.34);
 	border-right: solid 5px rgba(0,0,0,0.34);
-	background-color: rgba(0,0,0,0.17);
+	background-color: rgba(0,0,0,0.5);
     width:90%;
+    height: 100%;
     margin:0 auto -40px;
     z-index: 0;
+    display: table;
 }
 .information-wrapper2{
 	margin-top: 0px;
-
+	display: table-cell;
+    vertical-align: middle;
     height: 100%;
     margin:0 auto -40px;
     z-index: 0;
 }
 .auto-height{
-	min-height:100%;
-    height:auto !important;
+	/*min-height:100%;
+    height:auto !important;*/
   
 }
 .information-div{
-	padding-top: 20px;
+	padding: 20px 5px 75px 5px;
 	position: relative;
 	margin: 0 auto;
 	text-align: center;
@@ -174,6 +179,8 @@ h6 {
 	text-align: center;
 	background-color: rgba(0,0,0,0.65);
 	z-index:500;
+	/* Gets rid of random 1px space at bottom of screen in firefox, may have other side affects?*/
+    overflow: hidden;
 }
 .push{
 	height: 40px;
@@ -316,6 +323,41 @@ h6 {
     animation-play-state:paused;
 }
 
+
+/*ABOUT*/
+
+
+.portrait-div{
+	position: absolute;
+	margin: auto;
+  position: absolute;
+  top: 0px; left: 0; bottom: 0; right: 0;
+  z-index: 5;
+}
+
+.about-div{
+	background-color:rgba(255,255,255,.05);
+	border-radius: 5px;
+	border-left:2px solid rgba(0,0,0,.25);
+	border-top: 2px solid rgba(0,0,0,.25);
+	border-right: 2px solid rgba(0,0,0,.25);
+}
+.bio-div{
+	position: relative;
+	border-color: rgba(255,255,255,.1);
+	background-color: rgba(0,0,0,0.2);
+	border: 2px solid;
+	border-radius: 5px;
+	border-color: rgba(255,255,255,.5);
+	padding: 20px 10px 0px 10px;
+	margin-bottom: 20px;
+	margin-top: 92px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	max-width: 800px;
+	text-align: center;
+}
 /* PROJECTS */
 .project-title{
 	font-size: 24px;
@@ -324,7 +366,8 @@ h6 {
 	color: #dddddd;
 }
 .projects-div{
-	padding: 20px 20px;
+	padding: 20px 20px 100px 20px;
+
 	position: relative;
 	margin: 0 auto;
 	max-width: 1000px;
@@ -356,7 +399,10 @@ h6 {
 	width: 100%;
 	font-family: "Impact";
 	background-color: rgba(255,255,255,0.05);
-	border:none;
+	border-radius: 5px;
+	border-left:2px solid rgba(0,0,0,.25);
+	border-bottom: 2px solid rgba(0,0,0,.25);
+	border-right: 2px solid rgba(0,0,0,.25);
 	font-size: 20px;
 	cursor:pointer;
 	color:#ffffff;
@@ -413,17 +459,24 @@ h6 {
 	
 }
 .even{
-
+	margin-bottom: 10px;
 	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
-	background-color: rgba(0,0,100,.25);
+	background-color: rgba(0,0,0,.25);
 	box-shadow: 0px 2px 1px #000000;
+	border: 2px solid;
+	border-color: rgba(255,255,255,.1);
+	
 }
 .odd{
-
+	margin-bottom: 10px;
 	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)); 
-	background-color: rgba(100,0,0,.25);
+	background-color: rgba(0,0,0,.5);
+	border: 2px solid;
+	border-color: rgba(255,255,255,.1);
+	
 }
 .project-img{
+	width: 100%;
 	max-width: 40%;
 	height: auto;
 	padding: 5px 10px;
