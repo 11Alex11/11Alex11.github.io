@@ -138,6 +138,38 @@ window.addEventListener('load',function(){
 					});
 					console.log("OREJC");
 				}
+				else if(page=="index.html"){
+					var scrollNum=0;
+					var moving=false;
+					var images= ["./img/projects/fotag.png","./img/projects/fotag.png","./img/projects/fotag.png","./img/projects/fotag.png"];
+					$(".image-showcase").append('<img class="showcase-image logo" src="' +images[0]+' "/> ');
+					$(".image-showcase").append('<img class="showcase-image logo" src="' +images[0]+' "/> ');
+					$(".image-showcase").append('<img class="showcase-image logo" src="' +images[0]+' "/> ');
+					$(".image-showcase").append('<img class="showcase-image logo" src="' +images[0]+' "/> ');
+					$(".image-showcase").append('<img class="showcase-image logo" src="' +images[0]+' "/> ');
+					$(".image-showcase").append('<img class="showcase-image logo" src="' +images[0]+' "/> ');
+					var interval=false;
+					$('.showcase-left').mouseover(function(){
+						interval = setInterval(function(){
+					      scrollNum=scrollNum+.5;
+							$('.image-showcase').css({transform:'translateX(' + scrollNum+ '%)'});
+					   }, 10);
+					});
+					$('.showcase-left').mouseout(function(){
+						clearInterval(interval);
+						interval=false;
+					});
+					$('.showcase-right').mouseover(function(){
+						interval = setInterval(function(){
+					      scrollNum=scrollNum-.5;;
+							$('.image-showcase').css({transform:'translateX(' + scrollNum+ '%)'});
+					   }, 10);
+					});
+					$('.showcase-right').mouseout(function(){
+						clearInterval(interval);
+						interval=false;
+					});
+				}
 				//$(this).wrapInner('<div/>');
    //var newheight = $('div:first',this).height();
    //$(this).animate( {height: newheight},300 );
