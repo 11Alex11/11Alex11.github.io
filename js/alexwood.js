@@ -136,9 +136,8 @@ window.addEventListener('load',function(){
 							$(showDiv).animate( {height: '0'},300 );
 						}
 					});
-					console.log("OREJC");
 				}
-				else if(page=="index.html"){
+				else if(page=="index.html"|| page==""){
 					var scrollNum=0;
 					var moving=false;
 					var images= ["./img/projects/fotag.png","./img/projects/fotag.png","./img/projects/fotag.png","./img/projects/fotag.png"];
