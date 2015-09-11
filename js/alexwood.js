@@ -106,7 +106,7 @@ window.addEventListener('load',function(){
 					$('.projects-div').delegate("button","click",function(event){
 
 						if(event.target.innerHTML=="Triangular"){
-							var triangularTemp=$('#triangular-template').html();
+							var triangularTemp=$('.triangular-template').html();
 							console.log(triangularTemp)
 							showTri = !showTri;
 							console.log(showTri)
@@ -140,18 +140,23 @@ window.addEventListener('load',function(){
 				else if(page=="index.html"|| page==""){
 					var scrollNum=0;
 					var moving=false;
-					var images= ["./img/projects/fotag.png","./img/projects/fotag.png","./img/projects/fotag.png","./img/projects/fotag.png"];
-					$(".image-showcase").append('<img class="showcase-image logo" src="' +images[0]+' "/> ');
-					$(".image-showcase").append('<img class="showcase-image logo" src="' +images[0]+' "/> ');
-					$(".image-showcase").append('<img class="showcase-image logo" src="' +images[0]+' "/> ');
-					$(".image-showcase").append('<img class="showcase-image logo" src="' +images[0]+' "/> ');
-					$(".image-showcase").append('<img class="showcase-image logo" src="' +images[0]+' "/> ');
-					$(".image-showcase").append('<img class="showcase-image logo" src="' +images[0]+' "/> ');
+					var images= ["./img/projects/wassup-login.png","./img/projects/wassup-main.png","./img/projects/fotag.png","./img/projects/fotag2.png","./img/projects/triangular1.png","./img/projects/fotag2.png"];
+					for(var i=0;i<images.length;i++){
+						$(".image-showcase").append('<img class="showcase-image logo" src="' +images[i]+' "/> ');
+					}
 					var interval=false;
+					console.log($('.image-showcase').position().left);
 					$('.showcase-left').mouseover(function(){
-						interval = setInterval(function(){
-					      scrollNum=scrollNum+.5;
-							$('.image-showcase').css({transform:'translateX(' + scrollNum+ '%)'});
+						
+						interval = setInterval(function(){	
+							 // The 10 comes from somewhere, this is a terrible solution and i should look into it
+							if(10<$('.image-showcase').position().left  ){
+								scrollNum=0;
+							}
+					     	else{
+					     		scrollNum=scrollNum+1;
+								$('.image-showcase').css({transform:'translateX(' + scrollNum+ '%)'});
+							}
 					   }, 10);
 					});
 					$('.showcase-left').mouseout(function(){
@@ -160,15 +165,27 @@ window.addEventListener('load',function(){
 					});
 					$('.showcase-right').mouseover(function(){
 						interval = setInterval(function(){
-					      scrollNum=scrollNum-.5;;
-							$('.image-showcase').css({transform:'translateX(' + scrollNum+ '%)'});
+							
+							if(-10>$('.image-showcase').width()+$('.image-showcase').position().left  ){
+							}
+							else{
+								scrollNum=scrollNum-1;
+					      		$('.image-showcase').css({transform:'translateX(' + scrollNum+ '%)'});
+					      	}
 					   }, 10);
 					});
 					$('.showcase-right').mouseout(function(){
 						clearInterval(interval);
 						interval=false;
 					});
+
+
 				}
+
+
+
+
+
 				//$(this).wrapInner('<div/>');
    //var newheight = $('div:first',this).height();
    //$(this).animate( {height: newheight},300 );

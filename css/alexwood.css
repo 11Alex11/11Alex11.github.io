@@ -173,12 +173,13 @@ h6 {
 /*IMAGE SHOWCASE*/
 
 .showcase{
-	padding-top: 10px;
+
 	position: relative;
 	display: inline-block;
 	width: 100%;
 	height: 20%;
-	padding: 20px 10px 0 10px;
+	margin: 20px 0px 0 0px;
+	padding: 10px 0;
 	max-width: 800px;
 	border:2px solid;
 	border-radius: 5px;
@@ -186,14 +187,13 @@ h6 {
 }
 .image-showcase{
 	transform:translateX(0px);
-
 	height: 100%;
 	position: relative;
-	padding: 5px;
+	padding: 5px 10px 5px 10px;
 	vertical-align: center;
-	margin: 0 auto;
+	margin:auto;
 	white-space: nowrap;
-
+	display: table;
 }
 .image-overlay{
 	pointer-events: none;
@@ -201,10 +201,13 @@ h6 {
 	height: 100%;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
-	background:linear-gradient(to right,rgba(0,0,0,1)0%, rgba(0,0,0,.2) 30%, rgba(0,0,0,.2) 70%,rgba(0,0,0,1)100%);
+	background:linear-gradient(to right,rgba(0,0,0,1)0%, rgba(0,0,0,.2) 30%, rgba(0,0,0,0)50%, rgba(0,0,0,.2) 70%,rgba(0,0,0,1)100%);
 	z-index: 100;
 }
 .showcase-image{
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
 	width:33%;
 	padding: 10px;
 }
@@ -482,6 +485,9 @@ h6 {
     -ms-transition:  background-color 0.25s linear; /* IE 10 */
     -moz-transition:  background-color 0.25s linear; /* Firefox */
     -webkit-transition:  background-color 0.25s linear; /*safari and chrome */
+}
+.triangular-template{
+	display: none;
 }
 .language-text{
 	font-size: 10px;
