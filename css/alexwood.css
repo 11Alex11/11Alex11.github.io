@@ -109,9 +109,30 @@ h6 {
     -moz-transition:  background-color 0.25s linear; /* Firefox */
     -webkit-transition:  background-color 0.25s linear; /*safari and chrome */
 }
+/*DEFAULT COLOR FOR MENU*/
 .menu-bar-button:hover {
+	background-color:#5cbf2a;
+}
+.menu-active{
+	background-color:#5cbf2a;
+}
+
+
+.menu-bar-button.home:hover, .menu-active.home {
 
 	background-color:#5cbf2a;
+}
+.menu-bar-button.about:hover,.menu-active.about{
+
+	background-color:#D6364B;
+}
+.menu-bar-button.projects:hover,.menu-active.projects {
+
+	background-color:#3BAABF;
+}
+.menu-bar-button.resume:hover,.menu-active.resume {
+
+	background-color:#DB9437;
 }
 .menu-bar-button:active {
 	margin-top:1px;
@@ -500,7 +521,7 @@ h6 {
 }
 .project-button:hover,.project-link:hover {
 
-	background-color:#5cbf2a;
+	background-color:#3BAABF;
 }
 .project-button:active {
 	position:relative;

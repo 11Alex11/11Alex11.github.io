@@ -19,15 +19,22 @@ window.addEventListener('load',function(){
 	var curIndex=0;
 	if(page=="index.html"){
 		curIndex=0;
+		$('.home').addClass('menu-active');
 	}
 	else if(page=="about.html"){
 		curIndex=1;
+				$('.about').addClass('menu-active');
+
 	}
 	else if(page=="projects.html"){
 		curIndex=2;
+				$('.projects').addClass('menu-active');
+
 	}
 	else if(page=="resume.html"){
 		curIndex=3;
+				$('.resume').addClass('menu-active');
+
 	}
 	var index=curIndex;
 	nextPage(path,LEFT,true);
@@ -35,6 +42,8 @@ window.addEventListener('load',function(){
 	/*Need to change to xml request*/
 	$('.navigation-bar').delegate("button","click",function(event){
 		var link = $(this).attr("href");
+		$('.menu-bar-button').each(function(){$(this).removeClass('menu-active');});
+		$(this).addClass('menu-active');
 		if(headerWait==false){
 			var index = getIndex(event.target);
 			console.log(index + " index");
@@ -57,10 +66,7 @@ window.addEventListener('load',function(){
 		window.open(link,'_blank');
 	});
 
-	$('.enlarge').delegate("button","click",function(event){
-		console.log("clicked");
-		event.target.style.width="90vw";
-	});
+	
 
 
 
@@ -98,11 +104,39 @@ window.addEventListener('load',function(){
 				historyDir.push(dir);
 			}
 			$mydiv.load(href + " #info-section",function(){
+				/*Image Specific functions (Enlarge images)*/
+				$('.logo').on('load','img',function(){console.log("DDD");});
+				$('.logo').delegate("img","click",function(event){
+		console.log("clicked");
+
+		//event.target.style.width="90vw";
+	});
+				
 				/* Page Specific Functions */
 				var showTri = false;
 				var path = window.location.pathname;
 				var page = path.split("/").pop();
 				if(page=="projects.html"){
+					$(window).resize(function(){
+						$('.project-button').each(function (){
+							var showDiv = $(this).next();
+						var divHeight = showDiv.height()
+						var autoHeight;
+						console.log(divHeight);
+						if(divHeight!=0){
+							var prevHeight=showDiv.height();
+							showDiv.css('height', 'auto');
+							autoHeight=showDiv.height();
+							showDiv.css('height', autoHeight);
+						}
+						else{
+							
+							
+						}
+						});
+
+
+					});
 					$('.projects-div').delegate("button","click",function(event){
 
 						if(event.target.innerHTML=="Triangular"){
