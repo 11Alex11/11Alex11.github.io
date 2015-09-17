@@ -17,7 +17,7 @@ window.addEventListener('load',function(){
 	var path = window.location.pathname;
 	var page = path.split("/").pop();
 	var curIndex=0;
-	if(page=="index.html"){
+	if(page=="index.html"||page==""){
 		curIndex=0;
 		$('.home').addClass('menu-active');
 	}
@@ -37,7 +37,7 @@ window.addEventListener('load',function(){
 
 	}
 	var index=curIndex;
-	nextPage(path,LEFT,true);
+	nextPage(path,LEFT,false);
 	/*Each button is given an href and this will determine what button is clicked and open the href*/
 	/*Need to change to xml request*/
 	$('.navigation-bar').delegate("button","click",function(event){
@@ -246,6 +246,24 @@ window.addEventListener('load',function(){
 		}
 		historyDir.pop();
 		historyIndex.pop();
+		var path = window.location.pathname;
+		var page = path.split("/").pop();
+		$('.menu-bar-button').each(function(){$(this).removeClass('menu-active');});
+		if(page=="index.html"||page==""){
+		$('.home').addClass('menu-active');
+	}
+	else if(page=="about.html"){
+				$('.about').addClass('menu-active');
+
+	}
+	else if(page=="projects.html"){
+				$('.projects').addClass('menu-active');
+
+	}
+	else if(page=="resume.html"){
+				$('.resume').addClass('menu-active');
+
+	}
 		nextPage(location.href,dir,false);
 	}
 });

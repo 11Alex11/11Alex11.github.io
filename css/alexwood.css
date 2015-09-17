@@ -227,7 +227,6 @@ h6 {
 }
 .showcase-image{
 	position: relative;
-	display: table-cell;
 	vertical-align: middle;
 	width:33%;
 	padding: 10px;
