@@ -2,6 +2,8 @@
 var LEFT = "LEFT";
 var RIGHT = "RIGHT";
 window.addEventListener('load',function(){
+
+
 	var historyDir=[RIGHT];
 	var historyIndex=[0];
 	var header = $('.navigation-bar');
@@ -66,7 +68,7 @@ window.addEventListener('load',function(){
 		window.open(link,'_blank');
 	});
 
-	
+
 
 
 
@@ -104,13 +106,8 @@ window.addEventListener('load',function(){
 				historyDir.push(dir);
 			}
 			$mydiv.load(href + " #info-section",function(){
-				/*Image Specific functions (Enlarge images)*/
-				$('.logo').on('load','img',function(){console.log("DDD");});
-				$('.logo').delegate("img","click",function(event){
-		console.log("clicked");
-
-		//event.target.style.width="90vw";
-	});
+				
+				
 				
 				/* Page Specific Functions */
 				var showTri = false;
@@ -155,8 +152,8 @@ window.addEventListener('load',function(){
 
 						}
 						var showDiv = event.target.nextElementSibling;
-						console.log(showDiv)
-						var divHeight = $(showDiv).height()
+						console.log(showDiv);
+						var divHeight = $(showDiv).height();
 						var autoHeight;
 						console.log(divHeight);
 						if(divHeight==0){
@@ -174,9 +171,9 @@ window.addEventListener('load',function(){
 				else if(page=="index.html"|| page==""){
 					var scrollNum=0;
 					var moving=false;
-					var images= ["./img/projects/wassup-login.png","./img/projects/wassup-main.png","./img/projects/fotag.png","./img/projects/fotag2.png","./img/projects/triangular1.png","./img/projects/fotag2.png"];
+					var images= ["./img/projects/cc3k.png","./img/projects/wassup-login.png","./img/projects/fotag.png","./img/projects/triangular1.png","./img/projects/wassup-main.png","./img/projects/collision.png"];
 					for(var i=0;i<images.length;i++){
-						$(".image-showcase").append('<img class="showcase-image logo" src="' +images[i]+' "/> ');
+						$(".image-showcase").append('<img class="showcase-image logo enlarge" src="' +images[i]+' "/> ');
 					}
 					var interval=false;
 					console.log($('.image-showcase').position().left);
@@ -230,6 +227,19 @@ window.addEventListener('load',function(){
 							$(".information-wrapper").toggleClass("move-right",false);
 							//$mydiv.toggleClass('auto-height',false);
 				},400);
+
+				/*Image Specific functions (Enlarge images)*/
+				//must be at end of load!
+				 $('.enlarge').click(function(){
+				 	var overlayTemp=$('.overlay-template').html();
+				 	$('.information-wrapper2').append(overlayTemp);
+				 	$('.overlay').find('.overlay-image').attr("src",$(this).attr("src"));
+				 	//check if any overlay is open and close it
+					$('.overlay').click(function(){
+						$(this).remove();
+					})
+				});
+
 			});
 			//50% of 1s to move off the screen, from move-left and move-right
 		},500);

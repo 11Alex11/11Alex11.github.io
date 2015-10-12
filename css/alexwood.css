@@ -18,6 +18,7 @@ body{
 	margin: 0px;
 	overflow-x:hidden;
 }
+.noscroll { position: fixed; overflow-y:scroll }
 html{
 	width: 100%;
 	height: 100%;
@@ -77,8 +78,8 @@ h6 {
 
 /*  MENU BAR */
 .menu-bar{
-	position: absolute;
-	z-index: 500;
+	position: fixed;
+	z-index: 1550;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -205,6 +206,8 @@ h6 {
 	border:2px solid;
 	border-radius: 5px;
 	overflow: hidden;
+	box-shadow:  0px 0px 5px rgba(0,0,0,1);
+
 }
 .image-showcase{
 	transform:translateX(0px);
@@ -255,12 +258,13 @@ h6 {
 /* COPYRIGHT DIVIDER */
 
 .copyright-bar{
-	position: relative;
+	position: fixed;
 	width: 100%;
-	height: 40px;	
+	height: 40px;
+	bottom: 0;	
 	text-align: center;
 	background-color: rgba(0,0,0,0.65);
-	z-index:2;
+	z-index:1550;
 	/* Gets rid of random 1px space at bottom of screen in firefox, may have other side affects?*/
     overflow: hidden;
 }
@@ -464,6 +468,13 @@ h6 {
 	max-width: 1000px;
 }
 
+.projects-wrapper{
+	border: 1px solid;
+	border-color: rgba(59,170,191,1);
+	border-radius: 10px;
+	overflow: hidden;
+
+}
 .project-button{
 	display: block;
 	width: 100%;
@@ -489,7 +500,7 @@ h6 {
 	margin-bottom: 5px;
 	width: 100%;
 	font-family: "Impact";
-	background-color: rgba(255,255,255,0.05);
+	background-color: rgba(59,170,191,0.2);
 	border-radius: 5px;
 	border-left:2px solid rgba(0,0,0,.25);
 	border-bottom: 2px solid rgba(0,0,0,.25);
@@ -529,7 +540,7 @@ h6 {
 .hide-content{
 	height: 0;
 	overflow: hidden;
-	padding: 0 8px;
+	padding: 0 20px;
 }
 
 .divider-div{
@@ -553,20 +564,18 @@ h6 {
 	
 }
 .even{
-	margin-bottom: 10px;
+	
 	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
-	background-color: rgba(0,0,0,.25);
+	background-color: rgba(59,170,191,0.05);
 	box-shadow: 0px 2px 1px #000000;
-	border: 2px solid;
-	border-color: rgba(255,255,255,.1);
+
 	
 }
 .odd{
-	margin-bottom: 10px;
+	
 	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)); 
-	background-color: rgba(0,0,0,.5);
-	border: 2px solid;
-	border-color: rgba(255,255,255,.1);
+	background-color: rgba(49,238,36,.05);
+	box-shadow: 0px 2px 1px #000000;
 	
 }
 .project-img{
@@ -599,13 +608,14 @@ h6 {
 }
 
 .lighter-div{
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0,0,0,0.4);
 	border: 2px solid;
 	border-radius: 5px;
-	border-color: rgba(255,255,255,.5);
-	padding: 0px 5px;
-	margin-bottom: 20px;
-	margin-top: 5px;
+	border-color: rgba(59,170,191,1);
+	padding: 0px 10px;
+
+	margin-bottom: 40px;
+	margin-top: 20px;
 	overflow: hidden;
 }
 
@@ -630,3 +640,46 @@ h6 {
     right: 0;
 }
 
+
+.overlay-template{
+	display: none;
+}
+.overlay{
+	display:table;
+	table-layout: fixed;
+	margin: 60px 0px;
+	position: fixed;
+	top:0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background-color: rgba(0,0,0,.6);
+
+
+	z-index: 1525;
+}
+.overlay-image-div{
+	padding: 20px;
+	table-layout: fixed;
+	width: 80vw;
+	height: 80vh;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+
+}
+
+.overlay-image{
+	padding: 10px;
+	background-color: rgba(0,0,0,1);
+	max-width:100%;
+	max-height:100%;
+	border: 2px solid #dddddd;
+	border-radius: 5px;
+	
+}
+
+.enlarge{
+	cursor:pointer;
+}
