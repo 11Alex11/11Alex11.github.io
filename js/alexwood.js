@@ -106,9 +106,9 @@ window.addEventListener('load',function(){
 				historyDir.push(dir);
 			}
 			$mydiv.load(href + " #info-section",function(){
-				
-				
-				
+
+
+
 				/* Page Specific Functions */
 				var showTri = false;
 				var path = window.location.pathname;
@@ -127,8 +127,8 @@ window.addEventListener('load',function(){
 							showDiv.css('height', autoHeight);
 						}
 						else{
-							
-							
+
+
 						}
 						});
 
@@ -143,12 +143,12 @@ window.addEventListener('load',function(){
 							console.log(showTri)
 							if(showTri){
 								$('.triangular-div').append(triangularTemp);
-								
+
 							}
 							else{
 								$('.triangular-div').empty();
 							}
-							
+
 
 						}
 						var showDiv = event.target.nextElementSibling;
@@ -163,7 +163,7 @@ window.addEventListener('load',function(){
 							$(showDiv).animate( {height:autoHeight},300 );
 						}
 						else{
-							
+
 							$(showDiv).animate( {height: '0'},300 );
 						}
 					});
@@ -178,8 +178,8 @@ window.addEventListener('load',function(){
 					var interval=false;
 					console.log($('.image-showcase').position().left);
 					$('.showcase-left').mouseover(function(){
-						
-						interval = setInterval(function(){	
+
+						interval = setInterval(function(){
 							 // The 10 comes from somewhere, this is a terrible solution and i should look into it
 							if(10<$('.image-showcase').position().left  ){
 								scrollNum=0;
@@ -196,8 +196,8 @@ window.addEventListener('load',function(){
 					});
 					$('.showcase-right').mouseover(function(){
 						interval = setInterval(function(){
-							
-							if(-10>$('.image-showcase').width()+$('.image-showcase').position().left  ){
+
+							if($('.image-showcase').width()<-$('.image-showcase').position().left -$('.showcase').width()*3/4  ){
 							}
 							else{
 								scrollNum=scrollNum-1;
