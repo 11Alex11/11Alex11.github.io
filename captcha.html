@@ -1,105 +1,13 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="./css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="./css/alexwood.css"/>
-		<link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="./img/icon/apple-touch-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="./img/icon/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="./img/icon/apple-touch-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="./img/icon/apple-touch-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="./img/icon/apple-touch-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="./img/icon/apple-touch-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="./img/icon/apple-touch-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="./img/icon/apple-touch-icon-180x180.png">
-		<link rel="icon" type="image/png" href="./img/icon/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="./img/icon/android-chrome-192x192.png" sizes="192x192">
-		<link rel="icon" type="image/png" href="./img/icon/favicon-96x96.png" sizes="96x96">
-		<link rel="icon" type="image/png" href="./img/icon/favicon-16x16.png" sizes="16x16">
-		<link rel="manifest" href="./img/icon/manifest.json">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="msapplication-TileImage" content="./img/icon/mstile-144x144.png">
-		<meta name="theme-color" content="#ffffff">
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-	</head>
-	<body>
-		<div class="loader-wrapper">
-			<div class="logo-div">
-				<img class = "spinner" src="./img/Logo.png">
-			</div>
-			<div class="loader-section section-left"></div>
-    		<div class="loader-section section-right"></div>
-		</div>
-		<div id="app-container">
-		<!--  MENU BAR -->
-			<div class="menu-bar">
-				<div class="navigation-bar">
-					<button class="menu-bar-button home" href="./index.html">
-						<img class = " icon " src="./img/House.png" >HOME
-					</button><!--
-					--><button class="menu-bar-button about" href="./about.html">
-						<img class = " icon " src="./img/Info.png">ABOUT
-					</button><!--
-					--><button class="menu-bar-button projects" href="./projects.html">
-						<img class = " icon " src="./img/Projects.png">PROJECTS
-					</button><!--
-					--><button class="menu-bar-button resume" href="./resume.html">
-						<img class = " icon " src="./img/Resume.png">RESUME
-					</button>
-
-				</div>
-			</div>
-
-		<!--  INFORMATION DIVIDER -->
-			<div class="information-wrapper auto-height">
-			<div class="information-wrapper2">
-
-			<section id="info-section">
-			<div class="push"></div>
-
-			<!-- TEMPLATES -->
-
-			<div class="overlay-template">
-
-						<div class="overlay">
-							<div class="overlay-image-div">
-								<img class="overlay-image" src="">
-							</div>
-						</div>
-			</div>
-
-			<div class="information-div">
-        <form action="" method="post">
-          <label for="name">Name:</label>
-          <input name="name" required><br />
-
-          <label for="email">Email:</label>
-          <input name="email" type="email" required><br />
-          <div class="g-recaptcha" data-sitekey="6LepcCQTAAAAAA9jR2JKDJTnxIp2jNmM26J6NkDo"></div>
-           <input type="submit" value="Submit" />
-        </form>
-
-
-			<div class="push"></div>
-			</section>
-			</div>
-			</div>
-			<div class="copyright-bar">
-				<div class="network-bar">
-					<button class="menu-bar-button" href="https://github.com/11Alex11" >
-						<img class = "network-icon" src="./img/Github.png">
-					</button><!--
-					--><button class="menu-bar-button"  href="https://ca.linkedin.com/pub/alex-wood/105/74b/2b3">
-						<img class = "network-icon" src="./img/lin.png">
-					</button><!--
-					--><button class="menu-bar-button"  href="mailto:alexwood232@gmail.com">
-						<img class = "network-icon" src="./img/email.png">
-					</button>
-				</div>
-			</div>
-		</div>
-
-	<script src="./js/alexwood.js"></script>
-	<script src="./js/jquery-1.11.3.js"></script>
-	</body>
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="6LdY7iQTAAAAACzTkGTyBpbKbBJigPznMtHVkfzv"></div>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
 </html>
