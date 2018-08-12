@@ -114,7 +114,9 @@ window.addEventListener('load',function(){
 				var path = window.location.pathname;
 				var page = path.split("/").pop();
 				if(page=="projects.html"){
+
 					$(window).resize(function(){
+
 						$('.project-button').each(function (){
 							var showDiv = $(this).next();
 						var divHeight = showDiv.height()
@@ -167,6 +169,10 @@ window.addEventListener('load',function(){
 							$(showDiv).animate( {height: '0'},300 );
 						}
 					});
+
+					// Open up the first project panel
+					$('.project-button')[0].click();
+
 				}
 				else if(page=="index.html"|| page==""){
 					var scrollNum=0;
