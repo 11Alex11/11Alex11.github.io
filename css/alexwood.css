@@ -220,7 +220,7 @@ h6 {
 	transform:translateX(0px);
 	height: 100%;
 	position: relative;
-	padding: 5px 10px 5px 10px;
+	padding: 5px 10px 5px 50px;
 	vertical-align: center;
 	margin:auto;
 	white-space: nowrap;

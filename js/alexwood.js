@@ -177,7 +177,7 @@ window.addEventListener('load',function(){
 				else if(page=="index.html"|| page==""){
 					var scrollNum=0;
 					var moving=false;
-					var images= ["./img/projects/cc3k.png","./img/projects/npr.png","./img/projects/wassup-login.png","./img/projects/farminventory.png","./img/projects/fotag.png","./img/projects/mushroom.png","./img/projects/triangular1.png","./img/projects/farmgame.png","./img/projects/wassup-main.png","./img/projects/collision.png"];
+					var images= ["./img/projects/openweatherapp.png","./img/projects/cc3k.png","./img/projects/npr.png","./img/projects/wassup-login.png","./img/projects/farminventory.png","./img/projects/fotag.png","./img/projects/mushroom.png","./img/projects/triangular1.png","./img/projects/farmgame.png","./img/projects/wassup-main.png","./img/projects/collision.png"];
 					for(var i=0;i<images.length;i++){
 						$(".image-showcase").append('<img class="showcase-image logo enlarge" src="' +images[i]+' "/> ');
 					}
@@ -203,7 +203,7 @@ window.addEventListener('load',function(){
 					$('.showcase-right').mouseover(function(){
 						interval = setInterval(function(){
 
-							if($('.image-showcase').width()<-$('.image-showcase').position().left -$('.showcase').width()*1.3  ){
+							if($('.image-showcase').width()<-$('.image-showcase').position().left -$('.showcase').width()*1.6  ){
 							}
 							else{
 								scrollNum=scrollNum-1;
