@@ -159,7 +159,7 @@ window.addEventListener('load',function(){
 						var autoHeight;
 						console.log(divHeight);
 						if(divHeight==0){
-							$(showDiv).css('height', 'auto 100%');
+							$(showDiv).css('height', 'auto');
 							autoHeight=$(showDiv).height();
 							$(showDiv).css('height', '0');
 							$(showDiv).animate( {height:autoHeight},300 );
